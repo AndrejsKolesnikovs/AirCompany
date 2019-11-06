@@ -4,9 +4,6 @@ import org.openqa.selenium.By;
 
 public class HomePage {
     private BaseFunc baseFunc;
-
-    //private final By TITLE = By.xpath(".//h1[contains(@class, 'headline__title')]");
-
     private final By FROM = By.xpath(".//select[@id='afrom']");
     private final By TO = By.xpath(".//select[@id='bfrom']");
     private final By GO = By.xpath(".//span[@class='gogogo']");
@@ -22,15 +19,7 @@ public class HomePage {
     public void selectToAirport(String to) {
         baseFunc.selectFromDropdown(TO, to);
     }
-    public void clickGoGoBtn(){
-        baseFunc.click(GO,);
+    public void clickGoGoBtn() {
+        baseFunc.clickBtn(GO);
     }
-
-        //Find WebElement
-        //baseFunc.getElements(FROM).click();
-
-
-
-        //click
-
 }

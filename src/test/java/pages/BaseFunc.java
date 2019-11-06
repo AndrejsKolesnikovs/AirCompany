@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -10,10 +9,11 @@ public class BaseFunc {
 
     private WebDriver driver;
 
-    public BaseFunc() {
+    public BaseFunc() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+        Thread.sleep(5000);
     }
 
     public void goToUrl(String url) {
@@ -26,15 +26,12 @@ public class BaseFunc {
 
     }
 
-    //public WebElement getElement(By locator) {
-    //       return driver.findElement(locator);
     public void selectFromDropdown(By locator, String text) {
         Select select = new Select(driver.findElement(locator));
         select.selectByVisibleText(text);
     }
-    public void click(){
 
+    public void clickBtn(By go) {
+        driver.findElement(go).click();
     }
-
-
 }
