@@ -13,7 +13,7 @@ public class BaseFunc {
         System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        Thread.sleep(5000);
+       // Thread.sleep(5000);
     }
 
     public void goToUrl(String url) {

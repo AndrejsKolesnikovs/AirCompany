@@ -23,8 +23,8 @@ public class PageObjectTest {
         PlanePlacePage planePlacePage = new PlanePlacePage(baseFunc);
         planePlacePage.clickBookBtn();
 
-        RegSuccessPage regSuccessPage = new RegSuccessPage(baseFunc);
-        regSuccessPage.equals()
+        /*RegSuccessPage regSuccessPage = new RegSuccessPage(baseFunc);
+        regSuccessPage.equals();*/
         }
 
     }
